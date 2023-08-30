@@ -7,3 +7,12 @@ config BR2_PACKAGE_LIBSOLV
 	  algorithm.
 
 	  https://github.com/openSUSE/libsolv
+
+if BR2_PACKAGE_LIBSOLV
+
+config BR2_PACKAGE_LIBSOLV_DEBIAN
+	bool "debian repository support"
+	help
+	  Build with debian database/repository support.
+
+endif
