@@ -24,4 +24,10 @@ else
 LIBSOLV_CONF_OPTS += -DDISABLE_SHARED=ON
 endif
 
+ifeq ($(BR2_PACKAGE_LIBSOLV_DEBIAN),y)
+LIBSOLV_CONF_OPTS += -DDEBIAN=ON
+else
+LIBSOLV_CONF_OPTS += -DDEBIAN=OFF
+endif
+
 $(eval $(cmake-package))
